@@ -4,6 +4,8 @@ Análise interativa dos registros de **celulares subtraídos** no estado de São
 
 O projeto entrega três visualizações — **exploração interativa**, **série temporal** e **mapa geográfico** — em uma aplicação única desenvolvida em Python com **Streamlit**, **Plotly** e **Folium**.
 
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red)
 ---
 
 ## Sobre a base de dados
@@ -11,8 +13,7 @@ O projeto entrega três visualizações — **exploração interativa**, **séri
 - **Fonte:** Secretaria de Segurança Pública do Estado de São Paulo — Portal de Dados Abertos
 - **Referência oficial:** https://www.ssp.sp.gov.br/estatistica/consultas
 - **Recorte:** ocorrências com `DATA_OCORRENCIA_BO` em **2026**
-- **Volume final após tratamento:** **194.116 registros** e **211.053 celulares** subtraídos
-
+- **Volume final após tratamento:** **163.485 registros** e **178.518 celulares** subtraídos
 
 Detalhes em [`dados/README.md`](dados/README.md).
 
@@ -92,10 +93,10 @@ streamlit run scripts/app.py
 
 | Indicador | Valor / Referência |
 | :--- | :--- |
-| **Período de maior valor** | Maio/2026 — 33.246 celulares |
-| **Período de menor valor** | Junho/2026 — 26.262 celulares |
+| **Período de maior valor** | Maio/2026 — 28.205 unidades |
+| **Período de menor valor** | Junho/2026 — 22.856 unidades |
 | **Tendência** | Oscilante, sem crescimento ou queda sustentada no período disponível |
 
 > *Nota:* O ano-base 2026 está incompleto na base consultada (dados consolidados até julho), o que limita conclusões definitivas sobre a tendência anual.
 
-* **Distribuição Geográfica:** O mapa revela forte concentração na capital, nos municípios do ABC paulista e na Grande São Paulo. No interior, as ocorrências distribuem-se de forma pulverizada, registrando volumes expressivamente inferiores aos observados na região metropolitana.
+* **Distribuição Geográfica:** O mapa revelou que o crime se concentra onde há maior densidade populacional, maior circulação de pedestres e maior quantidade de aparelhos em uso. A forte presença na Baixada Santista (Itanhaém, Praia Grande) sugere que o verificar pontos turísticos também é um fator importante. 
